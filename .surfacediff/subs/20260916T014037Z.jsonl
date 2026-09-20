@@ -1,0 +1,4 @@
+{"_meta":{"tool":"surfacediff","version":"0.1.0","format":1,"timestamp":"2026-09-16T01:40:37Z","tags":{"source":"subfinder"}}}
+{"key":"host|dev.example.com","kind":"host","attrs":{},"hash":"44136fa355b3678a"}
+{"key":"host|mail.example.com","kind":"host","attrs":{},"hash":"44136fa355b3678a"}
+{"key":"host|vpn.example.com","kind":"host","attrs":{},"hash":"44136fa355b3678a"}
