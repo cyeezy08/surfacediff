@@ -1,0 +1,5 @@
+{"_meta":{"tool":"surfacediff","version":"0.1.0","format":1,"timestamp":"2026-09-16T01:40:37Z","tags":{"source":"httpx"}}}
+{"key":"url|https://dev.example.com","kind":"url","attrs":{"status_code":404,"webserver":"nginx","tech":["nginx"]},"hash":"194c986fde1172d0"}
+{"key":"url|https://mail.example.com","kind":"url","attrs":{"status_code":403,"webserver":"apache","tech":["apache","php"]},"hash":"615e99b98dc6bb1a"}
+{"key":"url|https://staging.example.com","kind":"url","attrs":{"status_code":200,"title":"Staging","webserver":"nginx","tech":["nginx","react"]},"hash":"a64ed4ce7aba0711"}
+{"key":"url|https://vpn.example.com","kind":"url","attrs":{"status_code":200,"title":"SSL VPN","webserver":"nginx","tech":["nginx"]},"hash":"4855a53c9e3db3f1"}
