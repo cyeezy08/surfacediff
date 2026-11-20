@@ -1,6 +1,8 @@
-<p align="center">
-  <img src="assets/leviathan-x-header.svg" alt="Leviathan X: surfacediff, deterministic surface change intelligence" width="100%">
-</p>
+```text
+  LEVIATHAN X / SURFACEDIFF
+  snapshot  [  before  ] ------- delta -------> [  after  ]
+                   + added | - removed | ~ changed
+```
 
 # surfacediff
 
@@ -12,6 +14,12 @@ Part of the **Leviathan X** tooling suite. `surfacediff` normalizes supported st
 [Python packaging](pyproject.toml) | [Tests](tests) | [MIT license](LICENSE)
 
 > Operate only on inventory data collected with appropriate authorization. No live scanning or automated provider integration is implied by this package.
+
+---
+
+## Real CLI capture
+
+The [offline demo workflow](https://github.com/cyeezy08/surfacediff/actions/workflows/offline-demo.yml) runs the installed Python CLI without network input and publishes its actual help output as a terminal SVG and raw text. The diagram below describes the architecture; it is not a capture of a live scan. No fabricated before/after data is shown in the capture.
 
 ---
 
