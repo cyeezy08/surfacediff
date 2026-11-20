@@ -17,6 +17,12 @@ Part of the **Leviathan X** tooling suite. `surfacediff` normalizes supported st
 
 ---
 
+## Real CLI capture
+
+The [offline demo workflow](https://github.com/cyeezy08/surfacediff/actions/workflows/offline-demo.yml) runs the installed Python CLI without network input and publishes its actual help output as a terminal SVG and raw text. The diagram below describes the architecture; it is not a capture of a live scan. No fabricated before/after data is shown in the capture.
+
+---
+
 ## Why surfacediff?
 
 Discovery and monitoring tools answer different questions. A source may identify an asset today, but analysts also need a reproducible record of what changed between observations.
