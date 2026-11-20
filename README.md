@@ -1,33 +1,30 @@
-<div align="center">
+<p align="center">
+  <img src="assets/leviathan-x-header.svg" alt="Leviathan X: surfacediff, deterministic surface change intelligence" width="100%">
+</p>
 
 # surfacediff
 
-### External Attack Surface Snapshotting & Deterministic Field Diffs
+**Reproducible snapshots and field-level changes for authorized asset inventories.**
 
-[![Python Version](https://img.shields.io/badge/Python-3.10%2B-blue?style=for-the-badge&logo=python&logoColor=white)](https://github.com/leviathan-offsec/surfacediff)
-[![Zero Dependencies](https://img.shields.io/badge/Dependencies-0%20(stdlib%20only)-emerald?style=for-the-badge)](https://github.com/leviathan-offsec/surfacediff)
-[![License](https://img.shields.io/badge/License-MIT-gray?style=for-the-badge)](./LICENSE)
-[![Org](https://img.shields.io/badge/Org-leviathan--offsec-00ffcc?style=for-the-badge&logo=github&logoColor=black)](https://github.com/leviathan-offsec)
-[![Platform](https://img.shields.io/badge/Web-leviathan.ac-00ffcc?style=for-the-badge&logo=firefox&logoColor=black)](https://leviathan.ac)
+Part of the **Leviathan X** tooling suite. `surfacediff` normalizes supported structured and text inputs, records versioned snapshots and compares field-level differences. It does not discover or scan internet assets by itself.
 
-<p align="center">
-  <b>Recon tools find assets. <code>surfacediff</code> turns recon into automated, continuous perimeter monitoring.</b>
-</p>
+[![CI](https://github.com/cyeezy08/surfacediff/actions/workflows/ci.yml/badge.svg)](https://github.com/cyeezy08/surfacediff/actions/workflows/ci.yml)
+[Python packaging](pyproject.toml) | [Tests](tests) | [MIT license](LICENSE)
 
-</div>
+> Operate only on inventory data collected with appropriate authorization. No live scanning or automated provider integration is implied by this package.
 
 ---
 
 ## Why surfacediff?
 
-ProjectDiscovery and modern recon frameworks give you outstanding scanners — `subfinder`, `httpx`, `naabu`, `dnsx`. But they all lack the crucial layer: **state over time**.
+Discovery and monitoring tools answer different questions. A source may identify an asset today, but analysts also need a reproducible record of what changed between observations.
 
 `surfacediff` is the missing bridge:
 * **Pipe any recon tool straight in:** Automatically detects JSON and text streams from `subfinder`, `httpx`, `naabu`, and raw URL lists.
 * **Immutable, content-addressed snapshots:** Stored as deterministic, sorted JSONL in `./.surfacediff/`. 100% git-diffable.
 * **Granular field-by-field diffing:** Detects not just new/dead hosts, but status code flips (`200 -> 403`), title updates, added tech tags, and newly exposed ports.
 * **Alerting by design:** `surfacediff diff` exits with **code 1 when changes are detected** — instant exit-code alerting for cron jobs, CI/CD, and bash pipelines.
-* **Zero dependencies:** Built strictly with the Python standard library. No fragile dependency trees, no bloatware, zero supply-chain risk.
+* **Standard-library runtime:** No third-party runtime dependencies are declared. Deployment and input provenance still need review; no software is risk-free.
 
 ---
 
@@ -219,18 +216,20 @@ Global Options:
 
 ---
 
-## The Leviathan Ecosystem
+## Leviathan X tooling
 
-`surfacediff` is part of the **Leviathan Offensive Tooling Suite**:
+These tools remain independent, reusable executables. They are not claimed to already operate as a unified hosted service.
 
-* **[surfacediff](https://github.com/leviathan-offsec/surfacediff)** - Immutable content-addressed snapshotting and perimeter delta diffing.
-* **[HostageLVX](https://github.com/leviathan-offsec/HostageLVX)** - High-speed dangling DNS and subdomain takeover engine in Go.
-* **[FenrirLVX](https://github.com/leviathan-offsec/FenrirLVX)** - High-speed Go CLI for WordPress/CMS auditing & offline CVE correlation.
-* **[leviathan-core](https://github.com/leviathan-offsec/leviathan-core)** - Contract-enforced vulnerability risk scoring kernel (CVSS/EPSS/KEV).
-* **[agy-mcp](https://github.com/leviathan-offsec/agy-mcp)** - Hardened Model Context Protocol (FastMCP) server for AI coding assistants.
+* **[surfacediff](https://github.com/cyeezy08/surfacediff):** normalized snapshots and change reports.
+* **[HostageLVX](https://github.com/cyeezy08/HostageLVX):** dangling DNS and provider fingerprint classification.
+* **[FenrirLVX](https://github.com/cyeezy08/FenrirLVX):** WordPress component evidence and offline advisory correlation.
+
+### Data quality boundaries
+
+A missing snapshot, malformed input, a source outage or absent history is **unknown**, not a clean asset. Every comparison is limited by the provided observations. Treat example outputs as illustrative unless backed by actual fixtures and tests.
 
 ---
 
 ## License
 
-Licensed under the **MIT License**. Created & maintained by [@cyeezy08](https://github.com/cyeezy08) for [Leviathan OffSec](https://leviathan.ac).
+Licensed under the **MIT License**. Published as **Leviathan X** tooling.
