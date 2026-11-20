@@ -1,6 +1,8 @@
-<p align="center">
-  <img src="assets/leviathan-x-header.svg" alt="Leviathan X: surfacediff, deterministic surface change intelligence" width="100%">
-</p>
+```text
+  LEVIATHAN X / SURFACEDIFF
+  snapshot  [  before  ] ------- delta -------> [  after  ]
+                   + added | - removed | ~ changed
+```
 
 # surfacediff
 
