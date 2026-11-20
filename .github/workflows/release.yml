@@ -9,7 +9,7 @@
 # package name is not claimed on PyPI and publishing there is a decision with
 # support consequences, so the artifact is versioned and installable without it.
 # To install a release:
-#   pip install https://github.com/leviathan-offsec/surfacediff/releases/download/v0.1.0/surfacediff-0.1.0-py3-none-any.whl
+#   pip install https://github.com/cyeezy08/surfacediff/releases/download/v0.1.0/surfacediff-0.1.0-py3-none-any.whl
 name: Release
 
 on:
@@ -90,7 +90,7 @@ jobs:
             The console script and the import package are both `surfacediff`.
 
             ```bash
-            pip install https://github.com/leviathan-offsec/surfacediff/releases/download/${{ github.ref_name }}/surfacediff-${{ github.ref_name }}-py3-none-any.whl
+            pip install https://github.com/cyeezy08/surfacediff/releases/download/${{ github.ref_name }}/surfacediff-${{ github.ref_name }}-py3-none-any.whl
             surfacediff --help
             ```
           files: |

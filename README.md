@@ -69,10 +69,10 @@ flowchart LR
 
 ```bash
 # Direct install from GitHub
-pip install git+https://github.com/leviathan-offsec/surfacediff.git
+pip install git+https://github.com/cyeezy08/surfacediff.git
 
 # Or clone and install editable
-git clone https://github.com/leviathan-offsec/surfacediff.git
+git clone https://github.com/cyeezy08/surfacediff.git
 cd surfacediff && pip install -e .
 ```
 
@@ -169,7 +169,7 @@ jobs:
       - name: Install Tools
         run: |
           go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
-          pip install git+https://github.com/leviathan-offsec/surfacediff.git
+          pip install git+https://github.com/cyeezy08/surfacediff.git
 
       - name: Snapshot & Diff
         run: |
