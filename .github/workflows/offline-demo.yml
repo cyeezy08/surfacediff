@@ -21,7 +21,7 @@ jobs:
         shell: bash
         run: |
           mkdir -p dist
-          PYTHONPATH=src python3 -m surfacediff --help > dist/output.txt
+          PYTHONPATH=src python3 -c 'from surfacediff.cli import main; raise SystemExit(main())' --help > dist/output.txt
           python3 scripts/terminal_snapshot.py --input dist/output.txt --output dist/terminal.svg --title "SURFACEDIFF / CLI" --accent "#68BFFF"
           python3 - <<'PY'
           from pathlib import Path
